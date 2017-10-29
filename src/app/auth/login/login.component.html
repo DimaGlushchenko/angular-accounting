@@ -44,8 +44,8 @@
           *ngIf="form.get('password').invalid && form.get('password').touched"
         >
           <span *ngIf="form.get('password')['errors']['required']">Password cannot be empty</span>
-          <span *ngIf="form.get('password')['errors']['minlength']">
-            Password need be 
+          <span *ngIf="form.get('password')['errors']['minlength'] && form.get('password')['errors']['minlength']['requiredLength']">
+            Password need
             {{ form.get('password')['errors']['minlength']['requiredLength'] }}
             charts. naw {{ form.get('password')['errors']['minlength']['actualLength'] }}.
           </span>
