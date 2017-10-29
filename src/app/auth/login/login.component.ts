@@ -1,8 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Router } from '@angular/router';
 import { UsersService } from "./../../shared/services/users.service";
 import { User } from "../../shared/models/user.model";
 import { Message } from "../../shared/models/message.model";
+import { AuthService } from './../../shared/services/auth.service';
 
 @Component({
   selector: "login",
@@ -14,7 +16,11 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   message: Message;
 
-  constructor(private usersService: UsersService) {
+  constructor(
+    private users: UsersService,
+    private auth: AuthService,
+    private router: Router
+  ) {
   }
 
   ngOnInit() {
@@ -35,11 +41,14 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     const formData = this.form.value;
 
-    this.usersService.getUserByEmail(formData.email)
+    this.users.getUserByEmail(formData.email)
       .subscribe((user: User) => {
-        if (user) {
+        if (user) { 
           if (user.password === formData.password) {
-            // logic
+            this.message.text = '';
+            window.localStorage.setItem('user', JSON.stringify(user));
+            this.auth.login();
+            this.router.navigate(['']);
           } else {
             this.showMessage('no password');
           }

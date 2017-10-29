@@ -1,8 +1,11 @@
 <p class="text-xs-center">Login to work</p>
-<div 
-   class="alert alert-{{massage.type}}"
-   *ngIf="message.text"
-   >{{message.text}}</div>
+<div
+  class="alert alert-{{message.type}}"
+  *ngIf="message.text"
+  >
+  {{message.text}}
+</div>
+
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div 
     class="form-group"
@@ -60,7 +63,7 @@
     </div>
     <div class="form-group">
         <p class="text-muted text-xs-center">
-            No account? <a href="#">Register now!</a>
+            No account? <a [routerLink]="'/registration'">Register now!</a>
         </p>
     </div>
 </form>
