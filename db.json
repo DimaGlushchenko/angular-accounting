@@ -7,30 +7,6 @@
       "name": "Администратор"
     },
     {
-      "email": "glushenkodmitriy@gmail.com",
-      "password": "660220",
-      "name": "Dima",
-      "id": 2
-    },
-    {
-      "email": "glushenkodmitriy@gmail.com",
-      "password": "660220",
-      "name": "Dima",
-      "id": 3
-    },
-    {
-      "email": "dima@mail.ru",
-      "password": "12345678",
-      "name": "Dima",
-      "id": 4
-    },
-    {
-      "email": "dima@mail.ru",
-      "password": "12345678",
-      "name": "dima",
-      "id": 5
-    },
-    {
       "email": "test@mail.ru",
       "password": "12345678",
       "name": "test",

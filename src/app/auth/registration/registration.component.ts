@@ -11,6 +11,7 @@ import { User } from "../../shared/models/user.model";
   styleUrls: ["./registration.component.scss"]
 })
 export class RegistrationComponent implements OnInit {
+  [x: string]: any;
   form: FormGroup;
 
   constructor(
@@ -20,11 +21,8 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, [
-        Validators.required,
-        Validators.minLength(6)
-      ]),
+      email: new FormControl(null, [Validators.required, Validators.email], this.forbiddenEmails.bind(this)),
+      password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
       name: new FormControl(null, [Validators.required]),
       agree: new FormControl(false, [Validators.required])
     });
@@ -42,5 +40,18 @@ export class RegistrationComponent implements OnInit {
       });
     });
   }
+
+  forbiddenEmails(control: FormControl): Promise<any>{
+    return new Promise((resolve, reject) => {
+       this.users.getUserByEmail(control.value)
+         .subscribe((user: User) => {
+           if (user) {
+             resolve({forbiddenEmail: true})
+           } else {
+             resolve(null);
+           }
+         })
+    });
+  } 
   
 }
