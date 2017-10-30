@@ -9,7 +9,9 @@ import { PlanningComponent } from "./pages/planning/planning.component";
 import { RecordsComponent } from "./pages/records/records.component";
 import { SystemComponent } from "./system/system.component";
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { HeaderComponent } from './shared/header/header.component';
 
+import { DropdownDirective } from './shared/directives/dropdown.directive';
 
 @NgModule({
   imports: [
@@ -24,6 +26,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     PlanningComponent,
     RecordsComponent,
     SidebarComponent,
+    HeaderComponent,
+    DropdownDirective
   ]
 })
 export class SystemModule {}
