@@ -1,22 +1,24 @@
-import { Response } from '@angular/http';
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Response } from "@angular/http";
+import { Injectable } from "@angular/core";
+import { Http } from "@angular/http";
+import { Observable } from "rxjs/Observable";
 
-import { Bill } from '../models/bill.model';
+import { Bill } from "../models/bill.model";
+import { BaseApi } from "./../../../shared/core/base-api";
 
 @Injectable()
-export class BillService {
-  constructor(private http: Http) {}
+export class BillService extends BaseApi {
+  constructor(public http: Http) {
+    super(http);
+  }
 
   getBill(): Observable<Bill> {
-    return this.http.get('http://localhost:3000/bill')
-      .map((response: Response) => response.json());
+    return this.get("bill");
   }
 
-  getCurrency(base: string = 'RUB'): Observable<any> {
-    return this.http.get(`http://api.fixer.io/latest?base=${base}`)
+  getCurrency(base: string = "RUB"): Observable<any> {
+    return this.http
+      .get(`http://api.fixer.io/latest?base=${base}`)
       .map((response: Response) => response.json());
   }
-
 }
