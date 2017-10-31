@@ -16,6 +16,9 @@ import { BillCardComponent } from './pages/bill/bill-card/bill-card.component';
 import { BillService } from './shared/services/bill.service';
 import { CurrencyCardComponent } from './pages/bill/currency-card/currency-card.component';
 import { MomentPipe } from './shared/pipes/moment.pipe';
+import { AddEventComponent } from './pages/records/add-event/add-event.component';
+import { AddCategoryComponent } from './pages/records/add-category/add-category.component';
+import { EditCategoryComponent } from './pages/records/edit-category/edit-category.component';
 
 @NgModule({
   imports: [
@@ -34,7 +37,10 @@ import { MomentPipe } from './shared/pipes/moment.pipe';
     BillComponent,
     BillCardComponent,
     CurrencyCardComponent,
-    MomentPipe
+    MomentPipe,
+    AddEventComponent,
+    AddCategoryComponent,
+    EditCategoryComponent
   ],
   providers: [BillService]
 })
