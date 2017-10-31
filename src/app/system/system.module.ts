@@ -25,12 +25,12 @@ import { CurrencyCardComponent } from './pages/bill/currency-card/currency-card.
   declarations: [
     SystemComponent,
     HistoryComponent,
-    BillComponent,
     PlanningComponent,
     RecordsComponent,
     SidebarComponent,
     HeaderComponent,
     DropdownDirective,
+    BillComponent,
     BillCardComponent,
     CurrencyCardComponent
   ],
