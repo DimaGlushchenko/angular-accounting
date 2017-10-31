@@ -15,6 +15,7 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { BillCardComponent } from './pages/bill/bill-card/bill-card.component';
 import { BillService } from './shared/services/bill.service';
 import { CurrencyCardComponent } from './pages/bill/currency-card/currency-card.component';
+import { MomentPipe } from './shared/pipes/moment.pipe';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { CurrencyCardComponent } from './pages/bill/currency-card/currency-card.
     DropdownDirective,
     BillComponent,
     BillCardComponent,
-    CurrencyCardComponent
+    CurrencyCardComponent,
+    MomentPipe
   ],
   providers: [BillService]
 })
