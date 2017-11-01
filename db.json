@@ -15,28 +15,33 @@
   ],
   "bill": {
     "value": 94600,
-    "currency": "RUB"
+    "currency": "USD"
   },
   "categories": [
     {
-      "name": "Дом",
+      "name": "Home",
       "capacity": 15000,
       "id": 1
     },
     {
-      "name": "Еда",
+      "name": "food",
       "capacity": 10000,
       "id": 2
     },
     {
       "id": 3,
-      "name": "Машина",
+      "name": "Car",
       "capacity": 7000
     },
     {
-      "name": "test",
+      "name": "Test",
       "capacity": 2321,
       "id": 4
+    },
+    {
+      "name": "Hova",
+      "capacity": 1,
+      "id": 5
     }
   ],
   "events": [

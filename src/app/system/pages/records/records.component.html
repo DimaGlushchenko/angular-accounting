@@ -1,22 +1,28 @@
 <div class="title-block">
-  <h3 class="title">
-    Страница записей
-    <span class="sparkline bar"></span>
-  </h3>
-</div>
-
-<section class="section">
-  <div class="row">
-    <div class="col-md-6">
-      <add-event></add-event>
-    </div>
-    <div class="col-md-6">
-      <add-category (onCategoryAdd)="newCategoryAdded($event)"></add-category>
-    </div>
+    <h3 class="title">
+      Page of records<span class="sparkline bar"></span>
+    </h3>
   </div>
-  <div class="row">
-    <div class="col-md6">
-      <edit-category></edit-category>
+  
+  <section class="section text-center" *ngIf="!isLoaded">
+    Loading ...
+  </section>
+  
+  <section class="section" *ngIf="isLoaded">
+    <div class="row">
+      <div class="col-md-6">
+        <add-event></add-event>
+      </div>
+      <div class="col-md-6">
+        <add-category (onCategoryAdd)="newCategoryAdded($event)"></add-category>
+      </div>
     </div>
-  </div>
-</section>
+    <div class="row">
+      <div class="col-md-6">
+        <edit-category
+          [categories]="categories"
+          (onCategoryEdit)="categoryWasEdited($event)"
+        ></edit-category>
+      </div>
+    </div>
+  </section>
