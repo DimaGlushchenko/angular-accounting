@@ -18,6 +18,7 @@ import { EditCategoryComponent } from './pages/records/edit-category/edit-catego
 
 import { BillService } from './shared/services/bill.service';
 import { CategoriesService } from './shared/services/categories.service';
+import { EventsService } from "./shared/services/event.service";
 import { MomentPipe } from './shared/pipes/moment.pipe';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 
@@ -44,6 +45,6 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     AddCategoryComponent,
     EditCategoryComponent
   ],
-  providers: [BillService, CategoriesService]
+  providers: [BillService, CategoriesService, EventsService]
 })
 export class SystemModule {}
