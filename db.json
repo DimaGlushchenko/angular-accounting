@@ -32,16 +32,6 @@
       "id": 3,
       "name": "Car",
       "capacity": 7000
-    },
-    {
-      "name": "Test",
-      "capacity": 2321,
-      "id": 4
-    },
-    {
-      "name": "Hova",
-      "capacity": 1,
-      "id": 5
     }
   ],
   "events": [
