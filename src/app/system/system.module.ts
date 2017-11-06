@@ -21,6 +21,10 @@ import { CategoriesService } from './shared/services/categories.service';
 import { EventsService } from "./shared/services/event.service";
 import { MomentPipe } from './shared/pipes/moment.pipe';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { HistoryChartComponent } from './pages/history/history-chart/history-chart.component';
+import { HistoryEventsComponent } from './pages/history/history-events/history-events.component';
+import { HistoryDetailComponent } from './pages/history/history-detail/history-detail.component';
+import { HistoryFilterComponent } from './pages/history/history-filter/history-filter.component';
 
 
 @NgModule({
@@ -43,7 +47,11 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     MomentPipe,
     AddEventComponent,
     AddCategoryComponent,
-    EditCategoryComponent
+    EditCategoryComponent,
+    HistoryChartComponent,
+    HistoryEventsComponent,
+    HistoryDetailComponent,
+    HistoryFilterComponent
   ],
   providers: [BillService, CategoriesService, EventsService]
 })
