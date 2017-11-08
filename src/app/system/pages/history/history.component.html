@@ -1,11 +1,14 @@
 <div class="title-block">
-    <h3 class="title">
-      Страница истории <span class="sparkline bar"></span>
-    </h3>
-  </div>
+  <h3 class="title">
+    History page
+    <span class="sparkline bar"></span>
+  </h3>
+</div>
 
-<history-chart></history-chart>
-  
-<history-events></history-events>
+<div *ngIf="!isLoaded" class="text-center">Loading ...</div>
 
-<history-filter></history-filter>
+<div *ngIf="isLoaded">
+  <history-chart [data]="chartData"></history-chart>
+  <history-events></history-events>
+  <history-filter></history-filter>
+</div>

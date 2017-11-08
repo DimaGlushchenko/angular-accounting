@@ -10,7 +10,6 @@ import { SystemModule } from './system/system.module';
 
 import { UsersService } from './shared/services/users.service';
 import { AuthService } from './shared/services/auth.service';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -18,12 +17,11 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,  
+    BrowserAnimationsModule,
     HttpModule,
     AuthModule,
     AppRoutingModule,
     SystemModule,
-    NgxChartsModule
   ],
   providers: [UsersService, AuthService],
   bootstrap: [AppComponent]
