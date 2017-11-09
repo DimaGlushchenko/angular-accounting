@@ -9,6 +9,9 @@
 
 <div *ngIf="isLoaded">
   <history-chart [data]="chartData"></history-chart>
-  <history-events></history-events>
+  <history-events
+    [categories]="categories"
+    [events]="events"
+  ></history-events>
   <history-filter></history-filter>
 </div>
