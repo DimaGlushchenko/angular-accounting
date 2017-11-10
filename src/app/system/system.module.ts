@@ -20,7 +20,9 @@ import { BillService } from './shared/services/bill.service';
 import { CategoriesService } from './shared/services/categories.service';
 import { EventsService } from "./shared/services/event.service";
 import { MomentPipe } from './shared/pipes/moment.pipe';
+import { FilterPipe } from "./shared/pipes/filter.pipe";
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+
 import { HistoryChartComponent } from './pages/history/history-chart/history-chart.component';
 import { HistoryEventsComponent } from './pages/history/history-events/history-events.component';
 import { HistoryDetailComponent } from './pages/history/history-detail/history-detail.component';
@@ -45,6 +47,7 @@ import { HistoryFilterComponent } from './pages/history/history-filter/history-f
     BillCardComponent,
     CurrencyCardComponent,
     MomentPipe,
+    FilterPipe,
     AddEventComponent,
     AddCategoryComponent,
     EditCategoryComponent,
