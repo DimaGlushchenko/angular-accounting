@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
@@ -16,8 +17,11 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private users: UsersService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private title: Title
+  ) {
+    title.setTitle('registration')
+  }
 
   ngOnInit() {
     this.form = new FormGroup({
