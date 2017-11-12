@@ -27,6 +27,8 @@ export class HistoryComponent implements OnInit {
 
   chartData = [];
 
+  isFilterVisible = false;
+
   ngOnInit() {
     this.s1 = Observable.combineLatest(
       this.categoriesService.getCategories(),
@@ -56,6 +58,22 @@ export class HistoryComponent implements OnInit {
         }, 0)
       });
     });
+  }
+
+  private toggleFilterVisibility(dir: boolean) {
+    this.isFilterVisible = dir;
+  }
+
+  openFilter() {
+    this.toggleFilterVisibility(true);
+  }
+
+  onFilterApply(filterData) {
+    console.log(filterData);
+  }
+
+  onFilterCancel() {
+    this.toggleFilterVisibility(false);
   }
 
   ngOnDestroy() {
