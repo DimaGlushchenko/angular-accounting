@@ -9,9 +9,6 @@ import { WFMEvent } from "./../models/event.model";
 
 @Injectable()
 export class EventsService extends BaseApi {
-  
-  isLoded = false;
-
   constructor(public http: Http) {
     super(http);
   }
@@ -20,8 +17,11 @@ export class EventsService extends BaseApi {
     return this.post("events", event);
   }
 
-  getEvents(): Observable<WFMEvent[]>{
-    return this.get('events')
+  getEvents(): Observable<WFMEvent[]> {
+    return this.get("events");
   }
 
+  getEventById(id: string): Observable<WFMEvent> {
+    return this.get(`events/${id}`);
+  }
 }
