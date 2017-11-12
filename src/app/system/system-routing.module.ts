@@ -9,7 +9,7 @@ import { SystemComponent } from './system/system.component';
 import { HistoryDetailComponent } from './pages/history/history-detail/history-detail.component';
 
 const routes: Routes = [
-    {path: 'system', component: SystemComponent, children: [
+    {path: '', component: SystemComponent, children: [
         {path: 'bill', component: BillComponent},
         {path: 'history', component: HistoryComponent},
         {path: 'planning', component: PlanningComponent},
