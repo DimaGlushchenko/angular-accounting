@@ -1,6 +1,6 @@
 <div class="title-block">
   <h3 class="title">
-    Страница планирования
+    Planing page
     <span class="sparkline bar"></span>
   </h3>
 </div>
@@ -12,10 +12,10 @@
       <div class="card">
         <div class="card-header card-header-sm bordered">
           <div class="header-block">
-            <h3 class="title">Расходы</h3>
+            <h3 class="title">Outcome</h3>
           </div>
           <h5 class="planning-expenses pull-right">
-            Общий остаток:
+            Total outcome:
             <span class="text-success">{{bill.value | number:'1.2'}} Р</span>
           </h5>
         </div>
@@ -32,9 +32,9 @@
             <div class="col-xs-6">
               <p>
                 <span class="text-{{getCatColorClass(c)}}">{{ getCategoryCost(c) | number:'1.2' }}</span>
-                из
+                of
                 <span class="text-primary">{{ c.capacity | number:'1.2' }}</span>
-                | осталось
+                | left                
                 <span class="text-{{getCatColorClass(c)}}">{{ c.capacity - getCategoryCost(c) | number:'1.2' }}</span> (руб.)
               </p>
             </div>

@@ -7,6 +7,7 @@ import "rxjs/add/operator/map";
 export class BaseApi {
   private baseUrl = "http://localhost:3000/";
 
+  
   constructor(public http: Http) {}
 
   private getUrl(url: string = ""): string {
