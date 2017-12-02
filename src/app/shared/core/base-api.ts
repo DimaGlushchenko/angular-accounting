@@ -5,9 +5,8 @@ import "rxjs/add/operator/map";
 
 @Injectable()
 export class BaseApi {
-  private baseUrl = "http://localhost:3000/";
+  private baseUrl = "https://json-server-shgqiatskw.now.sh/";
 
-  
   constructor(public http: Http) {}
 
   private getUrl(url: string = ""): string {

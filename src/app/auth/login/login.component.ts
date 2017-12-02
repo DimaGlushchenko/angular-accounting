@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
 
     window.setTimeout(() => {
       this.message.text = "";
-    }, 5000);
+    }, 0);
   }
 
   onSubmit() {

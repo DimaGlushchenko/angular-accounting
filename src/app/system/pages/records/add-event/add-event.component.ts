@@ -40,7 +40,7 @@ export class AddEventComponent implements OnInit, OnDestroy {
 
   private showMessage(text: string) {
     this.message.text = text;
-    window.setTimeout(() => (this.message.text = ""), 5000);
+    window.setTimeout(() => (this.message.text = ""), 0);
   }
 
   onSubmit(form: NgForm) {

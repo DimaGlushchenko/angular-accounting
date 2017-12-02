@@ -46,7 +46,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
       .subscribe((category: Category) => {
         this.onCategoryEdit.emit(category);
         this.message.text = "Category successfully edited.";
-        window.setTimeout(() => (this.message.text = ""), 5000);
+        window.setTimeout(() => (this.message.text = ""), 0);
       });
   }
 
