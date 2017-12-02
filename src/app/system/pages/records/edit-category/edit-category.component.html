@@ -11,7 +11,9 @@
       >{{message.text}}</div>
       <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div class="form-group">
-          <label class="control-label" for="e-select-category">Выберите категорию</label>
+          <label class="control-label" for="e-select-category">
+            Select a category
+          </label>
           <select
             class="form-control"
             id="e-select-category"
@@ -50,7 +52,7 @@
           class="form-group"
           [ngClass]="{'has-error': capacity.invalid && capacity.touched}"
         >
-          <label class="control-label" for="e-category-value">Введите лимит</label>
+          <label class="control-label" for="e-category-value">Enter limit</label>
           <input
             type="number"
             id="e-category-value"
