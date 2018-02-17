@@ -21,7 +21,9 @@
       "styles": [
         "styles.scss",
         "./assets/vendor.css",
-        "./assets/theme.css"
+        "./assets/theme.css",
+        "../node_modules/ag-grid/dist/styles/ag-grid.css",
+        "../node_modules/ag-grid/dist/styles/ag-theme-fresh.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
